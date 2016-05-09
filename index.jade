@@ -2,7 +2,7 @@ doctype html
 //- basic libraries: jquery(1.10.2), d3js(3.5.4), angularjs(1.2.3), bootstrap(3.0)/semantic-ui(0.9.3/0.9.5)
 //-                  fontawesome(4.4.0), reactjs(0.14.0)
 - var use = { cdn: true, og: true, favicon: true }
-- var lib = { jquery: true, d3js: false, angular: true, bootstrap: true, semantic: false, fontawesome: true, reactjs: false }
+- var lib = { jquery: false, d3js: false, angular: true, bootstrap: true, semantic: false, fontawesome: true, reactjs: false }
 - var assets = "assets"
 - var favicon = "thumbnail.png"
 - var title = "template"
@@ -26,6 +26,7 @@ html(lang="en")
     include library.jade
     // custom files
     link(rel="stylesheet",type="text/css",href="index.css")
+    script(type="text/javascript",src="test.js")
     script(type="text/javascript",src="index.js")
   body
     #root
@@ -33,6 +34,13 @@ html(lang="en")
       ul
         li: a(href="https://www.google.com.tw/chrome/browser/desktop/") Google Chrome 瀏覽器
         li: a(href="https://www.kimonolabs.com/") KimonoLabs
+      ul
+        li: a(href="https://chrome.google.com/webstore/detail/javascript-library-for-co/hoooohdeiheekoemicbaeeiaokjhnpko") JavaScript Library for Console
+        li: a(href="https://developers.facebook.com/tools/explorer") 臉書 Graph API 測試工具
+        //-li
+          span 我是
+          a#jquery-bookmarklet(href="")  jQuery 注入器
+          span ，將我拖到書籤列就可以用囉！
 
     #footer
       a(href="http://x.co/dataproc") 本頁網址
